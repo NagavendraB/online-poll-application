@@ -1,14 +1,23 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-const App = () => {
-  const name = useSelector(state => state.name);
+import { AddQuestion, QuestionDetails, Questions } from './pages';
+import {
+  StyledGlobal,
+  StyledAppWrapper,
+} from './App.styled';
 
-  return (
-    <div className="App">
-      Hello World - {name}
-    </div>
-  );
-};
+const App = () => (
+  <StyledAppWrapper>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Questions} />
+        <Route exact path="/questions/:questionNo" component={QuestionDetails} />
+        <Route exact path="/add-question" component={AddQuestion} />
+      </Switch>
+      <StyledGlobal />
+    </Router>
+  </StyledAppWrapper>
+);
 
 export default App;
