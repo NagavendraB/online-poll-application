@@ -1,20 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
 import './index.css';
-
-const reducer = (state = { name: 'Nagavendra' }, action) => {
-  return state;
-};
-
-const store = createStore(
-  reducer,
-);
+import { store } from './redux/store';
 
 ReactDOM.render(
   <Provider store={store}>
