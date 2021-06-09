@@ -25,3 +25,14 @@ Below are the steps to get it running.
  - Install all the dependences in the application by using the command ``` yarn ```
  - Then start the application in another terminal by using command ``` yarn start ```
  - Run the tests using command ``` yarn test ```
+
+## Sample screens
+### Questions:
+![image](https://user-images.githubusercontent.com/22505966/121275634-77482600-c8cd-11eb-8f59-3cc2083e275b.png)
+
+
+### Question details:
+![image](https://user-images.githubusercontent.com/22505966/121275740-a199e380-c8cd-11eb-886c-15ad763340ae.png)
+
+### Add Question:
+![image](https://user-images.githubusercontent.com/22505966/121275790-b70f0d80-c8cd-11eb-8277-4b20d9b25bf2.png)
