@@ -16,5 +16,9 @@ export const StyledAppWrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1050px;
-  margin: 0 auto;
+  margin: 0 28px;
+  
+   @media (min-width: 768px) {
+     margin: 0 auto;
+  }
 `;
