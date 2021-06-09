@@ -1,0 +1,60 @@
+{
+  "extends": ["airbnb"],
+  "env": {
+    "browser" : true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
+  "rules": {
+    "max-len": [2, 120],
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-empty-function": 0,
+    "react/prop-types": 0,
+    "react/no-did-update-set-state": 0,
+    "react/sort-comp": 0,
+    "react/default-props-match-prop-types": 0,
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "jsx-a11y/label-has-for": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src", "server", "tools"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": [ "**/*.stories.js", "**/*.story.js" ],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    },
+    {
+      "files": [ "test/**/*.js"],
+      "parser": "babel-eslint",
+      "plugins": [
+        "prefer-bind-operator",
+        "decorators"
+      ],
+      "rules": {
+        // "prefer-bind-operator/prefer-bind-operator": 2, TODO: Enable when starting using the bind-operator
+        "no-console": "off"
+      }
+    }
+  ]
+}
